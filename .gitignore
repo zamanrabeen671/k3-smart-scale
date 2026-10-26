@@ -1,6 +1,20 @@
+# dependencies & build output
 node_modules/
 dist/
+bin/
+coverage/
+*.tsbuildinfo
 *.js.map
-.env
+
+# secrets: never commit these
+.env*
+*.pem
+kubeconfig*
+k3s.yaml
+
+# pulumi local state
 .pulumi/
-docs/
+
+# misc
+*.zip
+.DS_Store
