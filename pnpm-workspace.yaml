@@ -1,4 +1,6 @@
+cat > pnpm-workspace.yaml <<'EOF'
 packages:
-  - 'autoscaler'
-  - 'infra/pulumi'
-  - 'services/*'
+  - "services/*"
+  - "infra/*"
+  - "autoscaler"
+EOF

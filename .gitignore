@@ -18,3 +18,22 @@ k3s.yaml
 # misc
 *.zip
 .DS_Store
+cat >> .gitignore <<'EOF'
+
+# lockfiles: pnpm only
+package-lock.json
+yarn.lock
+
+# logs & editors
+*.log
+.vscode
+.idea
+
+# keep example env file
+!.env.example
+
+# pulumi stack configs (only commit ones with NO secrets)
+Pulumi.*.yaml
+!Pulumi.yaml
+!Pulumi.dev.yaml
+EOF

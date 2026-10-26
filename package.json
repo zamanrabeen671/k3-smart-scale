@@ -1,0 +1,18 @@
+{
+  "name": "my-k3s-autoscaler",
+  "private": true,
+  "packageManager": "pnpm@10.29.3",
+  "scripts": {
+    "svc:checkout:dev": "pnpm --filter checkout dev",
+    "lambda:build": "pnpm --filter autoscaler build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "infra:up": "pnpm lambda:build && pnpm --filter infra-pulumi exec pulumi up",
+    "infra:down": "pnpm --filter infra-pulumi exec pulumi destroy"
+  },
+  "engines": { 
+    "node": ">=22", 
+    "pnpm": ">=10", 
+    "npm": "please-use-pnpm" 
+  }
+}
